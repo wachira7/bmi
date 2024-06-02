@@ -2,7 +2,7 @@ import React, { createContext, useState } from 'react';
 
 const BMIContext = createContext(); //Creates a new context object called BMIContext. This context will be used to share state and functions related to BMI calculation across components.
 
-function BMIProvider({ children }) { //destructuring to get 'children' from the props. children represents any nested components that will consume the context.
+function BMIProvider({ children }) { // children represents any nested components that will consume the context.
   const [weight, setWeight] = useState(0);
   const [height, setHeight] = useState(0);
   const [bmi, setBMI] = useState(null);
@@ -10,7 +10,7 @@ function BMIProvider({ children }) { //destructuring to get 'children' from the 
   const calculateBMI = () => {
     if (height > 0 && weight > 0) {
       const heightInMeters = height / 100;
-      const bmiValue = (weight / (heightInMeters * heightInMeters)).toFixed(2); //format the value to 2dp
+      const bmiValue = (weight / (heightInMeters * heightInMeters)).toFixed(2); //round off the value  to 2dp
       setBMI(bmiValue);
     }
   };
