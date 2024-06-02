@@ -4,9 +4,10 @@ import { BMIContext } from './BMIContext';
 function BMIForm() {
   const { weight, setWeight, height, setHeight, calculateBMI } = useContext(BMIContext);
 
+  //function that handles form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    calculateBMI();
+    calculateBMI(); //Calls the calculateBMI function from the context to calculate and update the BMI.
   };
 
   return (
@@ -17,7 +18,7 @@ function BMIForm() {
           <input
             type="number"
             value={weight}
-            onChange={(e) => setWeight(Number(e.target.value))}
+            onChange={(e) => setWeight((e.target.value))}
           />
         </label>
       </div>
@@ -27,7 +28,7 @@ function BMIForm() {
           <input
             type="number"
             value={height}
-            onChange={(e) => setHeight(Number(e.target.value))}
+            onChange={(e) => setHeight((e.target.value))}
           />
         </label>
       </div>

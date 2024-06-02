@@ -1,7 +1,7 @@
 import React from 'react';
 import { BMIProvider } from './BMIContext';
 import BMIForm from './BMIForm';
-import BMICalculator from './BMICalculator';
+import BMIDisplay from './BMIDisplay';
 import './App.css';
 
 
@@ -11,7 +11,7 @@ function App() {
       <div className="App">
         <h1>BMI Calculator</h1>
         <BMIForm />
-        <BMICalculator />
+        <BMIDisplay />
       </div>
     </BMIProvider>
   );
